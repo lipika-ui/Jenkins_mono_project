@@ -1,0 +1,313 @@
+$flow-blue: #0085CA;
+$flow-blue-light: #00A7E1;
+$flow-blue-dark: darken( $flow-blue, 20% );
+
+$flow-red: #FF4713;
+$flow-red-light:  #f3b5a4;
+$flow-red-dark: darken( $flow-red, 20% );
+$flow-orange: #FFB81C;
+$flow-orange-light:  #f5dca8;
+$flow-orange-dark: darken( $flow-orange, 20% );
+$flow-purple: #981D97;
+$flow-purple-light:  #e0b5e0;
+$flow-purple-dark: darken( $flow-purple, 20% );
+$flow-green: #C4D600;
+$flow-green-light:  #bfc57df8;
+$flow-green-dark: darken( $flow-green, 20% );
+$flow-silver-light: #f4f3f3;
+$flow-silver: #BBBBBB;
+$flow-grey-light: #d9d9db;
+$flow-grey: #636569;
+$flow-grey-dark: darken( $flow-grey, 20% );
+$flow-white: #FFFFFF;
+
+/* Typography */
+body.theme-flow {
+  font-family: 'Times New Roman', Times, serif !important;
+}
+.theme-flow {
+  /* Colors */
+  .primary {
+    .blue {
+      .transparentBox {
+        background-color: $flow-blue;
+        border: 1px solid $flow-blue;
+      }
+      .C50 {
+        background-color: $flow-blue-light;
+        border: 1px solid $flow-blue-light;
+      }
+      .C100 {
+        background-color: $flow-blue-light;
+        border: 1px solid $flow-blue-light;
+      }
+      .C200 {
+        background-color: $flow-blue-light;
+        border: 1px solid $flow-blue-light;
+      }
+      .C300 {
+        background-color: $flow-blue-light;
+        border: 1px solid $flow-blue-light;
+      }
+      .C400 {
+        background-color: $flow-blue;
+        border: 1px solid $flow-blue;
+      }
+      .C500 {
+        background-color: $flow-blue;
+        border: 1px solid $flow-blue;
+      }
+      .C600 {
+        background-color: $flow-blue-dark;
+        border: 1px solid $flow-blue-dark;
+      }
+      .C700 {
+        background-color: $flow-blue-dark;
+        border: 1px solid $flow-blue-dark;
+      }
+      .C800 {
+        background-color: $flow-blue-dark;
+        border: 1px solid $flow-blue-dark;
+      }
+      .C900 {
+        background-color: $flow-blue-dark;
+        border: 1px solid $flow-blue-dark;
+      }
+    }
+  }
+  .secondary {
+    .green {
+      .transparentBox {
+        background-color: $flow-green;
+        border: 1px solid $flow-green;
+      }
+      .C50 {
+        background-color: $flow-green-light;
+        border: 1px solid $flow-green-light;
+      }
+      .C100 {
+        background-color: $flow-green-light;
+        border: 1px solid $flow-green-light;
+      }
+      .C200 {
+        background-color: $flow-green-light;
+        border: 1px solid $flow-green-light;
+      }
+      .C300 {
+        background-color: $flow-green-light;
+        border: 1px solid $flow-green-light;
+      }
+      .C400 {
+        background-color: $flow-green;
+        border: 1px solid $flow-green;
+      }
+      .C500 {
+        background-color: $flow-green;
+        border: 1px solid $flow-green;
+      }
+      .C600 {
+        background-color: $flow-green-dark;
+        border: 1px solid $flow-green-dark;
+      }
+      .C700 {
+        background-color: $flow-green-dark;
+        border: 1px solid $flow-green-dark;
+      }
+      .C800 {
+        background-color: $flow-green-dark;
+        border: 1px solid $flow-green-dark;
+      }
+      .C900 {
+        background-color: $flow-green-dark;
+        border: 1px solid $flow-green-dark;
+      }
+    }
+    .violent {
+      .transparentBox {
+        background-color: $flow-purple;
+        border: 1px solid $flow-purple;
+      }
+      .C50 {
+        background-color: $flow-purple-light;
+        border: 1px solid $flow-purple-light;
+      }
+      .C100 {
+        background-color: $flow-purple-light;
+        border: 1px solid $flow-purple-light;
+      }
+      .C200 {
+        background-color: $flow-purple-light;
+        border: 1px solid $flow-purple-light;
+      }
+      .C300 {
+        background-color: $flow-purple-light;
+        border: 1px solid $flow-purple-light;
+      }
+      .C400 {
+        background-color: $flow-purple;
+        border: 1px solid $flow-purple;
+      }
+      .C500 {
+        background-color: $flow-purple;
+        border: 1px solid $flow-purple;
+      }
+      .C600 {
+        background-color: $flow-purple-dark;
+        border: 1px solid $flow-purple-dark;
+      }
+      .C700 {
+        background-color: $flow-purple-dark;
+        border: 1px solid $flow-purple-dark;
+      }
+      .C800 {
+        background-color: $flow-purple-dark;
+        border: 1px solid $flow-purple-dark;
+      }
+      .C900 {
+        background-color: $flow-purple-dark;
+        border: 1px solid $flow-purple-dark;
+      }
+    }
+  }
+
+  .teritary {
+    .red {
+      .transparentBox {
+        background-color: $flow-red;
+        border: 1px solid $flow-red;
+      }
+      .C50 {
+        background-color: $flow-red-light;
+        border: 1px solid $flow-red-light;
+      }
+      .C100 {
+        background-color: $flow-red-light;
+        border: 1px solid $flow-red-light;
+      }
+      .C200 {
+        background-color: $flow-red-light;
+        border: 1px solid $flow-red-light;
+      }
+      .C300 {
+        background-color: $flow-red-light;
+        border: 1px solid $flow-red-light;
+      }
+      .C400 {
+        background-color: $flow-red;
+        border: 1px solid $flow-red;
+      }
+      .C500 {
+        background-color: $flow-red;
+        border: 1px solid $flow-red;
+      }
+      .C600 {
+        background-color: $flow-red-dark;
+        border: 1px solid $flow-red-dark;
+      }
+      .C700 {
+        background-color: $flow-red-dark;
+        border: 1px solid $flow-red-dark;
+      }
+      .C800 {
+        background-color: $flow-red-dark;
+        border: 1px solid $flow-red-dark;
+      }
+      .C900 {
+        background-color: $flow-red-dark;
+        border: 1px solid $flow-red-dark;
+      }
+    }
+    .orange {
+      .transparentBox {
+        background-color: $flow-orange;
+        border: 1px solid $flow-orange;
+      }
+      .C50 {
+        background-color: $flow-orange-light;
+        border: 1px solid $flow-orange-light;
+      }
+      .C100 {
+        background-color: $flow-orange-light;
+        border: 1px solid $flow-orange-light;
+      }
+      .C200 {
+        background-color: $flow-orange-light;
+        border: 1px solid $flow-orange-light;
+      }
+      .C300 {
+        background-color: $flow-orange-light;
+        border: 1px solid $flow-orange-light;
+      }
+      .C400 {
+        background-color: $flow-orange;
+        border: 1px solid $flow-orange;
+      }
+      .C500 {
+        background-color: $flow-orange;
+        border: 1px solid $flow-orange;
+      }
+      .C600 {
+        background-color: $flow-orange-dark;
+        border: 1px solid $flow-orange-dark;
+      }
+      .C700 {
+        background-color: $flow-orange-dark;
+        border: 1px solid $flow-orange-dark;
+      }
+      .C800 {
+        background-color: $flow-orange-dark;
+        border: 1px solid $flow-orange-dark;
+      }
+      .C900 {
+        background-color: $flow-orange-dark;
+        border: 1px solid $flow-orange-dark;
+      }
+    }
+  }
+  .transparencySet {
+    .OP8 {
+      opacity: 8%;
+    }
+    .OP16 {
+      opacity: 16%;
+    }
+    .OP24 {
+      opacity: 24%;
+    }
+    .OP32 {
+      opacity: 32%;
+    }
+    .OP40 {
+      opacity: 40%;
+    }
+    .OP48 {
+      opacity: 48%;
+    }
+  }
+  .dark-theme {
+    color: #ffffff !important;
+    background-color: #1a1a1a !important;
+  }
+
+  .light-theme {
+    color: #1a1a1a !important;
+    background-color: #fff;
+  }
+  /* Buttons */
+  .storybook-button--primary {
+    color: $flow-white;
+    background-color: $flow-blue;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    font-size: 18px;
+  }
+  .btn-large {
+    padding: 15px 72px;
+    font-size: 18px;
+  }
+  .btn-small {
+    padding: 15px 28px;
+    min-width: 130px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,738 @@
+/* primary colors*/
+$pink-50: #ffcfdc;
+$pink-100: #ffa6c2;
+$pink-200: #ff7daa;
+$pink-300: #ff5496;
+$pink-400: #ff2c83;
+$pink-500: #d91a70;
+$pink-600: #b30c5d;
+$pink-700: #8c034a;
+$pink-800: #660139;
+$pink-900: #460027;
+/* secondary colors*/
+$blue-50: #ebe6ff;
+$blue-100: #cabdff;
+$blue-200: #a694ff;
+$blue-300: #7f6bff;
+$blue-400: #5643ff;
+$blue-500: #392ed9;
+$blue-600: #221db3;
+$blue-700: #0f0f8c;
+$blue-800: #0a0d66;
+$blue-900: #07094e;
+$violent-50: #fad9ff;
+$violent-100: #f2b0ff;
+$violent-200: #e787ff;
+$violent-300: #d35cf7;
+$violent-400: #ba31ea;
+$violent-500: #931fc4;
+$violent-600: #6f119e;
+$violent-700: #4f0778;
+$violent-800: #330452;
+$violent-900: #210335;
+$light-blue-50: #9ed7f0;
+$light-blue-100: #71bde3;
+$light-blue-200: #49a2d6;
+$light-blue-300: #2487c9;
+$light-blue-400: #046cbc;
+$light-blue-500: #005096;
+$light-blue-600: #003870;
+$light-blue-700: #00224a;
+$light-blue-800: #000f24;
+$light-blue-900: #000814;
+$pale-cyan-50: #cbf1f2;
+$pale-cyan-100: #9ce1e6;
+$pale-cyan-200: #71ced9;
+$pale-cyan-300: #71ced9;
+$pale-cyan-400: #27a5bf;
+$pale-cyan-500: #177f99;
+$pale-cyan-600: #0b5b73;
+$pale-cyan-700: #04394d;
+$pale-cyan-800: #021b26;
+$pale-cyan-900: #01141c;
+/*neutral colors*/
+$white-50: #fafcfe;
+$white-100: #f6f7fa;
+$white-200: #f1f2f5;
+$grey-300: #e9eaed;
+$grey-400: #c7c8cb;
+$grey-500: #a9aaad;
+$grey-600: #7f8083;
+$black-700: #6a6c6e;
+$black-800: #4b4c4e;
+$black-900: #000000;
+/* support colors*/
+$green-50: #c4ffd6;
+$green-100: #95f5b5;
+$green-200: #68e897;
+$green-300: #40db7e;
+$green-400: #1acf67;
+$green-500: #0da856;
+$green-600: #048243;
+$green-700: #005c31;
+$green-800: #00361e;
+$green-900: #002816;
+$pale-blue-50: #9ed7f0;
+$pale-blue-100: #71bde3;
+$pale-blue-200: #49a2d6;
+$pale-blue-300: #2487c9;
+$pale-blue-400: #046cbc;
+$pale-blue-500: #005096;
+$pale-blue-600: #003870;
+$pale-blue-700: #00224a;
+$pale-blue-800: #000f24;
+$pale-blue-900: #000814;
+$organe-50: #ffe8bd;
+$organe-100: #ffd694;
+$organe-200: #ffc16b;
+$organe-300: #ffaa42;
+$organe-400: #fa8f1a;
+$organe-500: #d46c0b;
+$organe-600: #ad4e00;
+$organe-700: #873800;
+$organe-800: #612500;
+$organe-900: #4d1d00;
+$red-50: #fff2f0;
+$red-100: #ffd1cc;
+$red-200: #ffa9a3;
+$red-300: #ff7f7a;
+$red-400: #ff5252;
+$red-500: #d93b40;
+$red-600: #b32731;
+$red-700: #8c1823;
+$red-800: #66101c;
+$red-900: #500c15;
+
+.template-fluid {
+  padding: 30px;
+}
+/*  typography */
+body.theme-vtr {
+  font-family: 'Inter Regular', sans-serif;
+}
+.theme-vtr {
+  /* Colors */
+  .primary {
+    .pink {
+      .transparentBox {
+        background-color: $pink-400;
+        border: 1px solid $pink-400;
+      }
+      .C50 {
+        background-color: $pink-50;
+        border: 1px solid $pink-50;
+      }
+      .C100 {
+        background-color: $pink-100;
+        border: 1px solid $pink-100;
+      }
+      .C200 {
+        background-color: $pink-200;
+        border: 1px solid $pink-200;
+      }
+      .C300 {
+        background-color: $pink-300;
+        border: 1px solid $pink-300;
+      }
+      .C400 {
+        background-color: $pink-400;
+        border: 1px solid $pink-400;
+      }
+      .C500 {
+        background-color: $pink-500;
+        border: 1px solid $pink-500;
+      }
+      .C600 {
+        background-color: $pink-600;
+        border: 1px solid $pink-600;
+      }
+      .C700 {
+        background-color: $pink-700;
+        border: 1px solid $pink-700;
+      }
+      .C800 {
+        background-color: $pink-800;
+        border: 1px solid $pink-800;
+      }
+      .C900 {
+        background-color: $pink-900;
+        border: 1px solid $pink-900;
+      }
+    }
+  }
+  .secondary {
+    .blue {
+      .transparentBox {
+        background-color: $blue-400;
+        border: 1px solid $blue-400;
+      }
+      .C50 {
+        background-color: $blue-50;
+        border: 1px solid $blue-50;
+      }
+      .C100 {
+        background-color: $blue-100;
+        border: 1px solid $blue-100;
+      }
+      .C200 {
+        background-color: $blue-200;
+        border: 1px solid $blue-200;
+      }
+      .C300 {
+        background-color: $blue-300;
+        border: 1px solid $blue-300;
+      }
+      .C400 {
+        background-color: $blue-400;
+        border: 1px solid $blue-400;
+      }
+      .C500 {
+        background-color: $blue-500;
+        border: 1px solid $blue-500;
+      }
+      .C600 {
+        background-color: $blue-600;
+        border: 1px solid $blue-600;
+      }
+      .C700 {
+        background-color: $blue-700;
+        border: 1px solid $blue-700;
+      }
+      .C800 {
+        background-color: $blue-800;
+        border: 1px solid $blue-800;
+      }
+      .C900 {
+        background-color: $blue-900;
+        border: 1px solid $blue-900;
+      }
+    }
+    .violent {
+      .transparentBox {
+        background-color: $violent-400;
+        border: 1px solid $violent-400;
+      }
+      .C50 {
+        background-color: $violent-50;
+        border: 1px solid $violent-50;
+      }
+      .C100 {
+        background-color: $violent-100;
+        border: 1px solid $violent-100;
+      }
+      .C200 {
+        background-color: $violent-200;
+        border: 1px solid $violent-200;
+      }
+      .C300 {
+        background-color: $violent-300;
+        border: 1px solid $violent-300;
+      }
+      .C400 {
+        background-color: $violent-400;
+        border: 1px solid $violent-400;
+      }
+      .C500 {
+        background-color: $violent-500;
+        border: 1px solid $violent-500;
+      }
+      .C600 {
+        background-color: $violent-600;
+        border: 1px solid $violent-600;
+      }
+      .C700 {
+        background-color: $violent-700;
+        border: 1px solid $violent-700;
+      }
+      .C800 {
+        background-color: $violent-800;
+        border: 1px solid $violent-800;
+      }
+      .C900 {
+        background-color: $violent-900;
+        border: 1px solid $violent-900;
+      }
+    }
+    .paleCyan {
+      .transparentBox {
+        background-color: $pale-cyan-400;
+        border: 1px solid $pale-cyan-400;
+      }
+      .C50 {
+        background-color: $pale-cyan-50;
+        border: 1px solid $pale-cyan-50;
+      }
+      .C100 {
+        background-color: $pale-cyan-100;
+        border: 1px solid $pale-cyan-100;
+      }
+      .C200 {
+        background-color: $pale-cyan-200;
+        border: 1px solid $pale-cyan-200;
+      }
+      .C300 {
+        background-color: $pale-cyan-300;
+        border: 1px solid $pale-cyan-300;
+      }
+      .C400 {
+        background-color: $pale-cyan-400;
+        border: 1px solid $pale-cyan-400;
+      }
+      .C500 {
+        background-color: $pale-cyan-500;
+        border: 1px solid $pale-cyan-500;
+      }
+      .C600 {
+        background-color: $pale-cyan-600;
+        border: 1px solid $pale-cyan-600;
+      }
+      .C700 {
+        background-color: $pale-cyan-700;
+        border: 1px solid $pale-cyan-700;
+      }
+      .C800 {
+        background-color: $pale-cyan-800;
+        border: 1px solid $pale-cyan-800;
+      }
+      .C900 {
+        background-color: $pale-cyan-900;
+        border: 1px solid $pale-cyan-900;
+      }
+    }
+    .lightBlue {
+      .transparentBox {
+        background-color: $light-blue-400;
+        border: 1px solid $light-blue-400;
+      }
+      .C50 {
+        background-color: $light-blue-50;
+        border: 1px solid $light-blue-50;
+      }
+      .C100 {
+        background-color: $light-blue-100;
+        border: 1px solid $light-blue-100;
+      }
+      .C200 {
+        background-color: $light-blue-200;
+        border: 1px solid $light-blue-200;
+      }
+      .C300 {
+        background-color: $light-blue-300;
+        border: 1px solid $light-blue-300;
+      }
+      .C400 {
+        background-color: $light-blue-400;
+        border: 1px solid $light-blue-400;
+      }
+      .C500 {
+        background-color: $light-blue-500;
+        border: 1px solid $light-blue-500;
+      }
+      .C600 {
+        background-color: $light-blue-600;
+        border: 1px solid $light-blue-600;
+      }
+      .C700 {
+        background-color: $light-blue-700;
+        border: 1px solid $light-blue-700;
+      }
+      .C800 {
+        background-color: $light-blue-800;
+        border: 1px solid $light-blue-800;
+      }
+      .C900 {
+        background-color: $light-blue-900;
+        border: 1px solid $light-blue-900;
+      }
+    }
+  }
+  .teritary {
+    .green {
+      .transparentBox {
+        background-color: $green-400;
+        border: 1px solid $green-400;
+      }
+      .C50 {
+        background-color: $green-50;
+        border: 1px solid $green-50;
+      }
+      .C100 {
+        background-color: $green-100;
+        border: 1px solid $green-100;
+      }
+      .C200 {
+        background-color: $green-200;
+        border: 1px solid $green-200;
+      }
+      .C300 {
+        background-color: $green-300;
+        border: 1px solid $green-300;
+      }
+      .C400 {
+        background-color: $green-400;
+        border: 1px solid $green-400;
+      }
+      .C500 {
+        background-color: $green-500;
+        border: 1px solid $green-500;
+      }
+      .C600 {
+        background-color: $green-600;
+        border: 1px solid $green-600;
+      }
+      .C700 {
+        background-color: $green-700;
+        border: 1px solid $green-700;
+      }
+      .C800 {
+        background-color: $green-800;
+        border: 1px solid $green-800;
+      }
+      .C900 {
+        background-color: $green-900;
+        border: 1px solid $green-900;
+      }
+    }
+    .paleBlue {
+      .transparentBox {
+        background-color: $pale-blue-400;
+        border: 1px solid $pale-blue-400;
+      }
+      .C50 {
+        background-color: $pale-blue-50;
+        border: 1px solid $pale-blue-50;
+      }
+      .C100 {
+        background-color: $pale-blue-100;
+        border: 1px solid $pale-blue-100;
+      }
+      .C200 {
+        background-color: $pale-blue-200;
+        border: 1px solid $pale-blue-200;
+      }
+      .C300 {
+        background-color: $pale-blue-300;
+        border: 1px solid $pale-blue-300;
+      }
+      .C400 {
+        background-color: $pale-blue-400;
+        border: 1px solid $pale-blue-400;
+      }
+      .C500 {
+        background-color: $pale-blue-500;
+        border: 1px solid $pale-blue-500;
+      }
+      .C600 {
+        background-color: $pale-blue-600;
+        border: 1px solid $pale-blue-600;
+      }
+      .C700 {
+        background-color: $pale-blue-700;
+        border: 1px solid $pale-blue-700;
+      }
+      .C800 {
+        background-color: $pale-blue-800;
+        border: 1px solid $pale-blue-800;
+      }
+      .C900 {
+        background-color: $pale-blue-900;
+        border: 1px solid $pale-blue-900;
+      }
+    }
+    .orange {
+      .transparentBox {
+        background-color: $organe-400;
+        border: 1px solid $organe-400;
+      }
+      .C50 {
+        background-color: $organe-50;
+        border: 1px solid $organe-50;
+      }
+      .C100 {
+        background-color: $organe-100;
+        border: 1px solid $organe-100;
+      }
+      .C200 {
+        background-color: $organe-200;
+        border: 1px solid $organe-200;
+      }
+      .C300 {
+        background-color: $organe-300;
+        border: 1px solid $organe-300;
+      }
+      .C400 {
+        background-color: $organe-400;
+        border: 1px solid $organe-400;
+      }
+      .C500 {
+        background-color: $organe-500;
+        border: 1px solid $organe-500;
+      }
+      .C600 {
+        background-color: $organe-600;
+        border: 1px solid $organe-600;
+      }
+      .C700 {
+        background-color: $organe-700;
+        border: 1px solid $organe-700;
+      }
+      .C800 {
+        background-color: $organe-800;
+        border: 1px solid $organe-800;
+      }
+      .C900 {
+        background-color: $organe-900;
+        border: 1px solid $organe-900;
+      }
+    }
+    .red {
+      .transparentBox {
+        background-color: $red-400;
+        border: 1px solid $red-400;
+      }
+      .C50 {
+        background-color: $red-50;
+        border: 1px solid $red-900;
+      }
+      .C100 {
+        background-color: $red-100;
+        border: 1px solid $red-900;
+      }
+      .C200 {
+        background-color: $red-200;
+        border: 1px solid $red-900;
+      }
+      .C300 {
+        background-color: $red-300;
+        border: 1px solid $red-900;
+      }
+      .C400 {
+        background-color: $red-400;
+        border: 1px solid $red-900;
+      }
+      .C500 {
+        background-color: $red-500;
+        border: 1px solid $red-900;
+      }
+      .C600 {
+        background-color: $red-600;
+        border: 1px solid $red-900;
+      }
+      .C700 {
+        background-color: $red-700;
+        border: 1px solid $red-900;
+      }
+      .C800 {
+        background-color: $red-800;
+        border: 1px solid $red-900;
+      }
+      .C900 {
+        background-color: $red-900;
+        border: 1px solid $red-900;
+      }
+    }
+  }
+  .transparencySet {
+    .OP8 {
+      opacity: 8%;
+    }
+    .OP16 {
+      opacity: 16%;
+    }
+    .OP24 {
+      opacity: 24%;
+    }
+    .OP32 {
+      opacity: 32%;
+    }
+    .OP40 {
+      opacity: 40%;
+    }
+    .OP48 {
+      opacity: 48%;
+    }
+  }
+  /* buttons */
+  .storybook-button--primary {
+    color: $white-200;
+    background: $pink-400;
+    border-radius: 30px;
+    border: 2px solid $pink-400;
+    &:hover {
+      background-color: $pink-600;
+      border: 2px solid $pink-600;
+      outline: none;
+    }
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .mat-button-disabled {
+    border: none !important;
+  }
+
+  .storybook-button--secondary {
+    color: $pink-400;
+    background: #ffffff;
+    border-radius: 30px;
+    border: 2px solid $pink-400;
+    &:hover {
+      color: $pink-600;
+      outline: none;
+      border: 2px solid $pink-600;
+
+      svg path {
+        stroke: $pink-600;
+      }
+    }
+    svg path {
+      stroke: $pink-400;
+    }
+  }
+  .btn-large {
+    padding: 15px 72px;
+    font-size: 18px;
+  }
+  .btn-small {
+    padding: 15px 28px;
+    min-width: 130px;
+    font-size: 16px;
+  }
+  /*  typography */
+  .h7 {
+    font-weight: 900px;
+    font-size: 100px;
+  }
+  .h1 {
+    font-weight: 800px;
+    font-size: 70px;
+  }
+  .h2 {
+    font-weight: 800px;
+    font-size: 55px;
+  }
+  .h3 {
+    font-weight: 800px;
+    font-size: 45px;
+  }
+  .h4 {
+    font-weight: 800px;
+    font-size: 34px;
+  }
+  .h5 {
+    font-weight: 800px;
+    font-size: 30px;
+  }
+  .h6 {
+    font-weight: 800px;
+    font-size: 20px;
+  }
+  .b1 {
+    font-weight: 400px;
+    font-size: 30px;
+  }
+  .b2 {
+    font-weight: 400px;
+    font-size: 24px;
+  }
+  .b3 {
+    font-weight: 400px;
+    font-size: 18px;
+  }
+  .b4 {
+    font-weight: 400px;
+    font-size: 16px;
+  }
+  .s1 {
+    font-weight: 800px;
+    font-size: 25px;
+  }
+  .s2 {
+    font-weight: 800px;
+    font-size: 24px;
+  }
+  .s3 {
+    font-weight: 800px;
+    font-size: 18px;
+  }
+
+  .storybook-title {
+    font-weight: 700;
+    width: 474px;
+    font-family: 'Inter Bold', sans-serif;
+  }
+
+  .storybook-body {
+    font-weight: 400;
+    width: 474px;
+    font-family: 'Inter Regular', sans-serif;
+  }
+
+  .storybook-title-large {
+    font-size: 45px;
+  }
+
+  .storybook-title-regular {
+    font-size: 22px;
+  }
+
+  .storybook-title-medium {
+    font-size: 34px;
+  }
+
+  .storybook-title-small {
+    font-size: 30px;
+  }
+
+  .storybook-body-large {
+    font-size: 24px;
+  }
+
+  .storybook-body-regular {
+    font-size: 16px;
+  }
+
+  .storybook-body-medium {
+    font-size: 18px;
+  }
+
+  .storybook-body-small {
+    font-size: 18px;
+  }
+
+  .dark-theme {
+    color: #ffffff !important;
+    background-color: #1a1a1a !important;
+  }
+
+  .light-theme {
+    color: #1a1a1a !important;
+    background-color: #fff;
+  }
+
+  .primary-color {
+    color: $pink-400;
+  }
+
+  .success-color {
+    color: $green-400;
+  }
+
+  .info-color {
+    color: #1ed7fc;
+  }
+
+  .warning-color {
+    color: $organe-400;
+  }
+
+  .disabled-color {
+    color: #222b45;
+  }
+
+  .error-color {
+    color: $red-400;
+  }
+}

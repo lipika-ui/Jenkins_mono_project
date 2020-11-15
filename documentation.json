@@ -1,0 +1,1111 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "Chainable",
+            "id": "interface-Chainable-eeb6394b310e7cc14f0321cca3d9eb7f",
+            "file": "apps/vtr-e2e/src/support/commands.ts",
+            "type": "interface",
+            "sourceCode": "declare namespace Cypress {\r\n  // eslint-disable-next-line @typescript-eslint/no-unused-vars\r\n  interface Chainable<Subject> {\r\n    login(email: string, password: string): void;\r\n  }\r\n}\r\n//\r\n// -- This is a parent command --\r\nCypress.Commands.add('login', (email, password) => {\r\n  console.log('Custom command example: Login', email, password);\r\n});\r\n//\r\n// -- This is a child command --\r\n// Cypress.Commands.add(\"drag\", { prevSubject: 'element'}, (subject, options) => { ... })\r\n//\r\n//\r\n// -- This is a dual command --\r\n// Cypress.Commands.add(\"dismiss\", { prevSubject: 'optional'}, (subject, options) => { ... })\r\n//\r\n//\r\n// -- This will overwrite an existing command --\r\n// Cypress.Commands.overwrite(\"visit\", (originalFn, url, options) => { ... })\r\n",
+            "properties": [],
+            "indexSignatures": [],
+            "kind": 152,
+            "methods": [
+                {
+                    "name": "login",
+                    "args": [
+                        {
+                            "name": "email",
+                            "type": "string"
+                        },
+                        {
+                            "name": "password",
+                            "type": "string"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "jsdoctags": [
+                        {
+                            "name": "email",
+                            "type": "string",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "password",
+                            "type": "string",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "injectables": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-6c813fe1a49a7e3e1f3aed4543682db3",
+            "file": "apps/vtr/src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "lla-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'vtr'",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'lla-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss'],\r\n})\r\nexport class AppComponent {\r\n  title = 'vtr';\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "/*\r\n * Remove template code below\r\n */\r\n:host {\r\n  display: block;\r\n  font-family: sans-serif;\r\n  min-width: 300px;\r\n  max-width: 600px;\r\n  margin: 50px auto;\r\n}\r\n\r\n.gutter-left {\r\n  margin-left: 9px;\r\n}\r\n\r\n.col-span-2 {\r\n  grid-column: span 2;\r\n}\r\n\r\n.flex {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\nheader {\r\n  background-color: #143055;\r\n  color: white;\r\n  padding: 5px;\r\n  border-radius: 3px;\r\n}\r\n\r\nmain {\r\n  padding: 0 36px;\r\n}\r\n\r\np {\r\n  text-align: center;\r\n}\r\n\r\nh1 {\r\n  text-align: center;\r\n  margin-left: 18px;\r\n  font-size: 24px;\r\n}\r\n\r\nh2 {\r\n  text-align: center;\r\n  font-size: 20px;\r\n  margin: 40px 0 10px 0;\r\n}\r\n\r\n.resources {\r\n  text-align: center;\r\n  list-style: none;\r\n  padding: 0;\r\n  display: grid;\r\n  grid-gap: 9px;\r\n  grid-template-columns: 1fr 1fr;\r\n}\r\n\r\n.resource {\r\n  color: #0094ba;\r\n  height: 36px;\r\n  background-color: rgba(0, 0, 0, 0);\r\n  border: 1px solid rgba(0, 0, 0, 0.12);\r\n  border-radius: 4px;\r\n  padding: 3px 9px;\r\n  text-decoration: none;\r\n}\r\n\r\n.resource:hover {\r\n  background-color: rgba(68, 138, 255, 0.04);\r\n}\r\n\r\npre {\r\n  padding: 9px;\r\n  border-radius: 4px;\r\n  background-color: black;\r\n  color: #eee;\r\n}\r\n\r\ndetails {\r\n  border-radius: 4px;\r\n  color: #333;\r\n  background-color: rgba(0, 0, 0, 0);\r\n  border: 1px solid rgba(0, 0, 0, 0.12);\r\n  padding: 3px 9px;\r\n  margin-bottom: 9px;\r\n}\r\n\r\nsummary {\r\n  cursor: pointer;\r\n  outline: none;\r\n  height: 36px;\r\n  line-height: 36px;\r\n}\r\n\r\n.github-star-container {\r\n  margin-top: 12px;\r\n  line-height: 20px;\r\n}\r\n\r\n.github-star-container a {\r\n  display: flex;\r\n  align-items: center;\r\n  text-decoration: none;\r\n  color: #333;\r\n}\r\n\r\n.github-star-badge {\r\n  color: #24292e;\r\n  display: flex;\r\n  align-items: center;\r\n  font-size: 12px;\r\n  padding: 3px 10px;\r\n  border: 1px solid rgba(27, 31, 35, 0.2);\r\n  border-radius: 3px;\r\n  background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);\r\n  margin-left: 4px;\r\n  font-weight: 600;\r\n}\r\n\r\n.github-star-badge:hover {\r\n  background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);\r\n  border-color: rgba(27, 31, 35, 0.35);\r\n  background-position: -0.5em;\r\n}\r\n.github-star-badge .material-icons {\r\n  height: 16px;\r\n  width: 16px;\r\n  margin-right: 4px;\r\n}\r\n",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<header class=\"flex\">\r\n  <img\r\n    alt=\"Nx logo\"\r\n    width=\"75\"\r\n    src=\"https://nx.dev/assets/images/nx-logo-white.svg\"\r\n  />\r\n  <h1>Welcome to {{ title }}!</h1>\r\n</header>\r\n<main>\r\n  <h2>Resources &amp; Tools</h2>\r\n  <p>\r\n    Thank you for using and showing some ♥ for Nx.\r\n  </p>\r\n  <div class=\"flex github-star-container\">\r\n    <a\r\n      href=\"https://github.com/nrwl/nx\"\r\n      target=\"_blank\"\r\n      rel=\"noopener noreferrer\"\r\n    >\r\n      If you like Nx, please give it a star:\r\n      <div class=\"github-star-badge\">\r\n        <svg\r\n          class=\"material-icons\"\r\n          xmlns=\"http://www.w3.org/2000/svg\"\r\n          width=\"24\"\r\n          height=\"24\"\r\n          viewBox=\"0 0 24 24\"\r\n        >\r\n          <path d=\"M0 0h24v24H0z\" fill=\"none\" />\r\n          <path\r\n            d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"\r\n          />\r\n        </svg>\r\n        Star\r\n      </div>\r\n    </a>\r\n  </div>\r\n  <p>\r\n    Here are some links to help you get started.\r\n  </p>\r\n  <ul class=\"resources\">\r\n    <li class=\"col-span-2\">\r\n      <a\r\n        class=\"resource flex\"\r\n        href=\"https://connect.nrwl.io/app/courses/nx-workspaces/intro\"\r\n      >\r\n        Nx video course\r\n      </a>\r\n    </li>\r\n    <li class=\"col-span-2\">\r\n      <a\r\n        class=\"resource flex\"\r\n        href=\"https://nx.dev/angular/getting-started/what-is-nx\"\r\n      >\r\n        Nx video tutorial\r\n      </a>\r\n    </li>\r\n    <li class=\"col-span-2\">\r\n      <a\r\n        class=\"resource flex\"\r\n        href=\"https://nx.dev/angular/tutorial/01-create-application\"\r\n      >\r\n        Interactive tutorial\r\n      </a>\r\n    </li>\r\n    <li class=\"col-span-2\">\r\n      <a class=\"resource flex\" href=\"https://nx.app/\">\r\n        <svg\r\n          width=\"36\"\r\n          height=\"36\"\r\n          viewBox=\"0 0 120 120\"\r\n          fill=\"none\"\r\n          xmlns=\"http://www.w3.org/2000/svg\"\r\n        >\r\n          <path\r\n            d=\"M120 15V30C103.44 30 90 43.44 90 60C90 76.56 76.56 90 60 90C43.44 90 30 103.44 30 120H15C6.72 120 0 113.28 0 105V15C0 6.72 6.72 0 15 0H105C113.28 0 120 6.72 120 15Z\"\r\n            fill=\"#0E2039\"\r\n          />\r\n          <path\r\n            d=\"M120 30V105C120 113.28 113.28 120 105 120H30C30 103.44 43.44 90 60 90C76.56 90 90 76.56 90 60C90 43.44 103.44 30 120 30Z\"\r\n            fill=\"white\"\r\n          />\r\n        </svg>\r\n        <span class=\"gutter-left\">Nx Cloud</span>\r\n      </a>\r\n    </li>\r\n  </ul>\r\n  <h2>Next Steps</h2>\r\n  <p>Here are some things you can do with Nx.</p>\r\n  <details open>\r\n    <summary>Add UI library</summary>\r\n    <pre>\r\n# Generate UI lib\r\nng g @nrwl/angular:lib ui\r\n\r\n# Add a component\r\nng g @nrwl/angular:component xyz --project ui</pre\r\n    >\r\n  </details>\r\n  <details>\r\n    <summary>View dependency graph</summary>\r\n    <pre>nx dep-graph</pre>\r\n  </details>\r\n  <details>\r\n    <summary>Run affected commands</summary>\r\n    <pre>\r\n# see what's been affected by changes\r\nng affected:dep-graph\r\n\r\n# run tests for current changes\r\nng affected:test\r\n\r\n# run e2e tests for current changes\r\nng affected:e2e\r\n</pre\r\n    >\r\n  </details>\r\n</main>\r\n"
+        },
+        {
+            "name": "ButtonsComponent",
+            "id": "component-ButtonsComponent-d6da2904c59892f1b497689123f17dab",
+            "file": "stories/buttons.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-buttons",
+            "styleUrls": [
+                "./buttons.scss"
+            ],
+            "styles": [],
+            "template": "<div class=\"template-fluid\">    <button\n      *ngIf=\"!withicon\"\n      mat-raised-button\n      [disabled]=\"isdisabled\"\n      [ngClass]=\"[\n        extraClass ? extraClass : ' ',\n        secondary ? 'storybook-button--secondary' : 'storybook-button--primary'\n      ]\"\n    >\n      {{ text }}\n    </button>\n    <button\n      *ngIf=\"withicon\"\n      mat-raised-button\n      [disabled]=\"isdisabled\"\n      [ngClass]=\"[\n        extraClass ? extraClass : ' ',\n        secondary ? 'storybook-button--secondary' : 'storybook-button--primary'\n      ]\"\n    >\n      <span *ngIf=\"!textright && !icon\"> {{ text }} </span>\n      <svg\n        width=\"20\"\n        height=\"20\"\n        viewBox=\"0 0 20 20\"\n        fill=\"none\"\n        xmlns=\"http://www.w3.org/2000/svg\"\n      >\n        <path\n          fill-rule=\"evenodd\"\n          clip-rule=\"evenodd\"\n          d=\"M18.6552 1L1 9.09839H10.1954C10.3985 9.09839 10.5632 9.26307 10.5632 9.46621V18.6552L18.6552 1Z\"\n          stroke=\"white\"\n          stroke-width=\"1.47126\"\n          stroke-linecap=\"round\"\n          stroke-linejoin=\"round\"\n        />\n      </svg>\n      <span *ngIf=\"textright && !icon\"> {{ text }} </span>\n    </button>\n  </div>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "bgcolor",
+                    "defaultValue": "\"white\"",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 54
+                },
+                {
+                    "name": "extraClass",
+                    "defaultValue": "''",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 50
+                },
+                {
+                    "name": "isdisabled",
+                    "defaultValue": "false",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 52
+                },
+                {
+                    "name": "secondary",
+                    "defaultValue": "false",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 53
+                },
+                {
+                    "name": "text",
+                    "defaultValue": "''",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 51
+                }
+            ],
+            "methodsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-buttons',\r\n  template: `<div class=\"template-fluid\">\r\n    <button\r\n      *ngIf=\"!withicon\"\r\n      mat-raised-button\r\n      [disabled]=\"isdisabled\"\r\n      [ngClass]=\"[\r\n        extraClass ? extraClass : ' ',\r\n        secondary ? 'storybook-button--secondary' : 'storybook-button--primary'\r\n      ]\"\r\n    >\r\n      {{ text }}\r\n    </button>\r\n    <button\r\n      *ngIf=\"withicon\"\r\n      mat-raised-button\r\n      [disabled]=\"isdisabled\"\r\n      [ngClass]=\"[\r\n        extraClass ? extraClass : ' ',\r\n        secondary ? 'storybook-button--secondary' : 'storybook-button--primary'\r\n      ]\"\r\n    >\r\n      <span *ngIf=\"!textright && !icon\"> {{ text }} </span>\r\n      <svg\r\n        width=\"20\"\r\n        height=\"20\"\r\n        viewBox=\"0 0 20 20\"\r\n        fill=\"none\"\r\n        xmlns=\"http://www.w3.org/2000/svg\"\r\n      >\r\n        <path\r\n          fill-rule=\"evenodd\"\r\n          clip-rule=\"evenodd\"\r\n          d=\"M18.6552 1L1 9.09839H10.1954C10.3985 9.09839 10.5632 9.26307 10.5632 9.46621V18.6552L18.6552 1Z\"\r\n          stroke=\"white\"\r\n          stroke-width=\"1.47126\"\r\n          stroke-linecap=\"round\"\r\n          stroke-linejoin=\"round\"\r\n        />\r\n      </svg>\r\n      <span *ngIf=\"textright && !icon\"> {{ text }} </span>\r\n    </button>\r\n  </div> `,\r\n  styleUrls: ['./buttons.scss'],\r\n})\r\nexport default class ButtonsComponent {\r\n  extraClass = '';\r\n  text = '';\r\n  isdisabled = false;\r\n  secondary = false;\r\n  bgcolor = \"white\";\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./buttons.scss"
+                }
+            ],
+            "stylesData": ""
+        },
+        {
+            "name": "colorsComponent",
+            "id": "component-colorsComponent-5bb7e24681a1ead899c33b22ea89350f",
+            "file": "stories/colors.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-colors",
+            "styleUrls": [
+                "./color.scss"
+            ],
+            "styles": [],
+            "template": "<article class=\"template-fluid\"  [ngClass]=\"[  bgcolor=='white' ? 'light-theme' : 'dark-theme', btnCategory ? btnCategory : ' ']\">    <section *ngIf=\"getTheme == 'VTR'\">\n        <section *ngIf=\"btnCategory == 'primary'\">\n          <div  *ngFor= \"let primaryColor of bgcolorVTRPrimary\">\n                <h4>{{primaryColor | uppercase}}</h4>\n                <div  class=\"colorPallett\">\n                    <div class=\"colorSet\">\n                        <div [ngClass]=\"'colorBox  ' + primaryColor\"  *ngFor = \"let op of opacity\">\n                              <p class=\"codeValue\">{{op.replace('C', '')}}</p>\n                              <div [ngClass]=\"'colorInnerBox ' + op\"></div>\n                              <div [ngClass]=\"'colorInnerBox outlinedBox ' + op\"></div>\n                        </div>\n                    </div>\n                    <div class=\"transparencySet\">\n                        <div [ngClass]=\"'colorBox  ' + primaryColor\"  *ngFor = \"let op of transparency\">\n                            <p class=\"codeValue\">{{op.replace('OP', '')}}</p>\n                            <div [ngClass]=\"'transparentBox colorInnerBox ' + op\"></div>\n                            <div  [ngClass]=\"'transparentBox colorInnerBox outlinedBox ' + op\"></div>\n                        </div>\n                    </div>\n                </div>\n          </div>\n        </section>\n        <section *ngIf=\"btnCategory == 'secondary'\">\n          <div  *ngFor= \"let secondaryColor of bgcolorVTRSecondary\">\n              <h4>{{secondaryColor  | uppercase}}</h4>\n              <div class=\"colorPallett\">\n                    <div class=\"colorSet\">\n                        <div [ngClass]=\"'colorBox  ' + secondaryColor\"  *ngFor = \"let op of ['C50','C100','C200','C300','C400','C500','C600','C700','C800']\">\n                          <p class=\"codeValue\">{{op.replace('C', '')}}</p>\n                          <div mat-raised-button [ngStyle]=\"{'font-weight': '600', 'border': '0px'}\" [ngClass]=\"'colorInnerBox ' + op\"></div>\n                          <div  [ngStyle]=\"{'font-weight': '600'}\" [ngClass]=\"'colorInnerBox outlinedBox ' + op\"></div>\n                        </div>\n                    </div>\n                    <div class=\"transparencySet\">\n                        <div [ngClass]=\"'colorBox  ' + secondaryColor\"  *ngFor = \"let op of transparency\">\n                            <p class=\"codeValue\">{{op.replace('OP', '')}}</p>\n                            <div [ngClass]=\"'transparentBox colorInnerBox ' + op\"></div>\n                            <div  [ngClass]=\"'transparentBox colorInnerBox outlinedBox ' + op\"></div>\n                        </div>\n                    </div>\n              </div>\n          </div>\n        </section>\n        <section *ngIf=\"btnCategory == 'teritary'\">\n        <div  *ngFor= \"let teritaryColor of bgcolorVTRTeritary\"  class=\"colorSet\">\n              <h4>{{teritaryColor | uppercase}}</h4>\n              <div  class=\"colorPallett\">\n                      <div  class=\"colorSet\">\n                          <div [ngClass]=\"'colorBox  ' + teritaryColor\"  *ngFor = \"let op of opacity\">\n                              <p class=\"codeValue\">{{op.replace('C', '')}}</p>\n                              <div mat-raised-button [ngStyle]=\"{'font-weight': '600', 'border': '0px'}\" [ngClass]=\"'colorInnerBox ' + op\"></div>\n                              <div  [ngStyle]=\"{'font-weight': '600'}\" [ngClass]=\"'colorInnerBox outlinedBox ' + op\"></div>\n                          </div>\n                       </div>\n                       <div  class=\"transparencySet\">\n                          <div [ngClass]=\"'colorBox  ' + teritaryColor\"  *ngFor = \"let op of transparency\">\n                              <p class=\"codeValue\">{{op.replace('OP', '')}}</p>\n                              <div [ngClass]=\"'transparentBox colorInnerBox ' + op\"></div>\n                              <div  [ngClass]=\"'transparentBox colorInnerBox outlinedBox ' + op\"></div>\n                          </div>\n                       </div>\n               </div>\n         </div>\n      </section>\n    </section>\n    <section *ngIf=\"getTheme == 'Flow'\">\n        <section *ngIf=\"btnCategory == 'primary'\">\n            <div  *ngFor= \"let primaryColor of bgcolorFlowPrimary\">\n                <h4>{{primaryColor | uppercase}}</h4>\n                <div  class=\"colorPallett\">\n                    <div class=\"colorSet\">\n                        <div [ngClass]=\"'colorBox  ' + primaryColor\"  *ngFor = \"let op of opacity\">\n                                <p class=\"codeValue\">{{op.replace('C', '')}}</p>\n                                <div [ngClass]=\"'colorInnerBox ' + op\"></div>\n                                <div [ngClass]=\"'colorInnerBox outlinedBox ' + op\"></div>\n                        </div>\n                    </div>\n                    <div class=\"transparencySet\">\n                        <div [ngClass]=\"'colorBox  ' + primaryColor\"  *ngFor = \"let op of transparency\">\n                            <p class=\"codeValue\">{{op.replace('OP', '')}}</p>\n                            <div [ngClass]=\"'transparentBox colorInnerBox ' + op\"></div>\n                            <div  [ngClass]=\"'transparentBox colorInnerBox outlinedBox ' + op\"></div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </section>\n        <section *ngIf=\"btnCategory == 'secondary'\">\n            <div  *ngFor= \"let secondaryColor of bgcolorFlowSecondary\">\n                <h4>{{secondaryColor  | uppercase}}</h4>\n                <div class=\"colorPallett\">\n                    <div class=\"colorSet\">\n                        <div [ngClass]=\"'colorBox  ' + secondaryColor\"  *ngFor = \"let op of ['C50','C100','C200','C300','C400','C500','C600','C700','C800']\">\n                            <p class=\"codeValue\">{{op.replace('C', '')}}</p>\n                            <div mat-raised-button [ngStyle]=\"{'font-weight': '600', 'border': '0px'}\" [ngClass]=\"'colorInnerBox ' + op\"></div>\n                            <div  [ngStyle]=\"{'font-weight': '600'}\" [ngClass]=\"'colorInnerBox outlinedBox ' + op\"></div>\n                        </div>\n                    </div>\n                    <div class=\"transparencySet\">\n                        <div [ngClass]=\"'colorBox  ' + secondaryColor\"  *ngFor = \"let op of transparency\">\n                            <p class=\"codeValue\">{{op.replace('OP', '')}}</p>\n                            <div [ngClass]=\"'transparentBox colorInnerBox ' + op\"></div>\n                            <div  [ngClass]=\"'transparentBox colorInnerBox outlinedBox ' + op\"></div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </section>\n        <section *ngIf=\"btnCategory == 'teritary'\">\n            <div  *ngFor= \"let teritaryColor of bgcolorFlowTeritary\"  class=\"colorSet\">\n                    <h4>{{teritaryColor | uppercase}}</h4>\n                    <div  class=\"colorPallett\">\n                            <div  class=\"colorSet\">\n                                <div [ngClass]=\"'colorBox  ' + teritaryColor\"  *ngFor = \"let op of opacity\">\n                                    <p class=\"codeValue\">{{op.replace('C', '')}}</p>\n                                    <div mat-raised-button [ngStyle]=\"{'font-weight': '600', 'border': '0px'}\" [ngClass]=\"'colorInnerBox ' + op\"></div>\n                                    <div  [ngStyle]=\"{'font-weight': '600'}\" [ngClass]=\"'colorInnerBox outlinedBox ' + op\"></div>\n                                </div>\n                            </div>\n                            <div  class=\"transparencySet\">\n                                <div [ngClass]=\"'colorBox  ' + teritaryColor\"  *ngFor = \"let op of transparency\">\n                                    <p class=\"codeValue\">{{op.replace('OP', '')}}</p>\n                                    <div [ngClass]=\"'transparentBox colorInnerBox ' + op\"></div>\n                                    <div  [ngClass]=\"'transparentBox colorInnerBox outlinedBox ' + op\"></div>\n                                </div>\n                            </div>\n                    </div>\n            </div>\n        </section>\n    </section>\n</article>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "bgcolor",
+                    "defaultValue": "\"white\"",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 154
+                },
+                {
+                    "name": "bgcolorFlowPrimary",
+                    "defaultValue": "[\"blue\"]",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 151
+                },
+                {
+                    "name": "bgcolorFlowSecondary",
+                    "defaultValue": "[\"green\",\"violent\"]",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 152
+                },
+                {
+                    "name": "bgcolorFlowTeritary",
+                    "defaultValue": "[\"red\",\"orange\"]",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 153
+                },
+                {
+                    "name": "bgcolorVTRPrimary",
+                    "defaultValue": "[\"pink\"]",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 148
+                },
+                {
+                    "name": "bgcolorVTRSecondary",
+                    "defaultValue": "[\"blue\",\"violent\",\"lightBlue\",\"paleCyan\"]",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 149
+                },
+                {
+                    "name": "bgcolorVTRTeritary",
+                    "defaultValue": "[\"green\",\"paleBlue\",\"orange\",\"red\"]",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 150
+                },
+                {
+                    "name": "btnCategory",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 146
+                },
+                {
+                    "name": "getTheme",
+                    "defaultValue": "\"VTR\"",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 147
+                },
+                {
+                    "name": "opacity",
+                    "defaultValue": "['C50','C100','C200','C300','C400','C500','C600','C700','C800','C900']",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 144
+                },
+                {
+                    "name": "textAlignment",
+                    "defaultValue": "\"left\"",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 143
+                },
+                {
+                    "name": "transparency",
+                    "defaultValue": "['OP8','OP16','OP24','OP32','OP40','OP48']",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 145
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 155
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit} from '@angular/core';\r\nimport {MatGridListModule, MatGridTile, MatGridList} from '@angular/material/grid-list';\r\n\r\n\r\n@Component({\r\n  selector: 'storybook-colors',\r\n  template: `<article class=\"template-fluid\"  [ngClass]=\"[  bgcolor=='white' ? 'light-theme' : 'dark-theme', btnCategory ? btnCategory : ' ']\">\r\n    <section *ngIf=\"getTheme == 'VTR'\">\r\n        <section *ngIf=\"btnCategory == 'primary'\">\r\n          <div  *ngFor= \"let primaryColor of bgcolorVTRPrimary\">\r\n                <h4>{{primaryColor | uppercase}}</h4>\r\n                <div  class=\"colorPallett\">\r\n                    <div class=\"colorSet\">\r\n                        <div [ngClass]=\"'colorBox  ' + primaryColor\"  *ngFor = \"let op of opacity\">\r\n                              <p class=\"codeValue\">{{op.replace('C', '')}}</p> \r\n                              <div [ngClass]=\"'colorInnerBox ' + op\"></div>\r\n                              <div [ngClass]=\"'colorInnerBox outlinedBox ' + op\"></div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"transparencySet\">\r\n                        <div [ngClass]=\"'colorBox  ' + primaryColor\"  *ngFor = \"let op of transparency\">\r\n                            <p class=\"codeValue\">{{op.replace('OP', '')}}</p> \r\n                            <div [ngClass]=\"'transparentBox colorInnerBox ' + op\"></div>\r\n                            <div  [ngClass]=\"'transparentBox colorInnerBox outlinedBox ' + op\"></div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n          </div>\r\n        </section>\r\n        <section *ngIf=\"btnCategory == 'secondary'\">\r\n          <div  *ngFor= \"let secondaryColor of bgcolorVTRSecondary\">\r\n              <h4>{{secondaryColor  | uppercase}}</h4>\r\n              <div class=\"colorPallett\">\r\n                    <div class=\"colorSet\">\r\n                        <div [ngClass]=\"'colorBox  ' + secondaryColor\"  *ngFor = \"let op of ['C50','C100','C200','C300','C400','C500','C600','C700','C800']\">\r\n                          <p class=\"codeValue\">{{op.replace('C', '')}}</p>   \r\n                          <div mat-raised-button [ngStyle]=\"{'font-weight': '600', 'border': '0px'}\" [ngClass]=\"'colorInnerBox ' + op\"></div>\r\n                          <div  [ngStyle]=\"{'font-weight': '600'}\" [ngClass]=\"'colorInnerBox outlinedBox ' + op\"></div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"transparencySet\">\r\n                        <div [ngClass]=\"'colorBox  ' + secondaryColor\"  *ngFor = \"let op of transparency\">\r\n                            <p class=\"codeValue\">{{op.replace('OP', '')}}</p> \r\n                            <div [ngClass]=\"'transparentBox colorInnerBox ' + op\"></div>\r\n                            <div  [ngClass]=\"'transparentBox colorInnerBox outlinedBox ' + op\"></div>\r\n                        </div>\r\n                    </div>\r\n              </div>\r\n          </div>\r\n        </section>\r\n        <section *ngIf=\"btnCategory == 'teritary'\">\r\n        <div  *ngFor= \"let teritaryColor of bgcolorVTRTeritary\"  class=\"colorSet\">\r\n              <h4>{{teritaryColor | uppercase}}</h4>\r\n              <div  class=\"colorPallett\">\r\n                      <div  class=\"colorSet\">\r\n                          <div [ngClass]=\"'colorBox  ' + teritaryColor\"  *ngFor = \"let op of opacity\">\r\n                              <p class=\"codeValue\">{{op.replace('C', '')}}</p>\r\n                              <div mat-raised-button [ngStyle]=\"{'font-weight': '600', 'border': '0px'}\" [ngClass]=\"'colorInnerBox ' + op\"></div>\r\n                              <div  [ngStyle]=\"{'font-weight': '600'}\" [ngClass]=\"'colorInnerBox outlinedBox ' + op\"></div>\r\n                          </div>\r\n                       </div>\r\n                       <div  class=\"transparencySet\">\r\n                          <div [ngClass]=\"'colorBox  ' + teritaryColor\"  *ngFor = \"let op of transparency\">\r\n                              <p class=\"codeValue\">{{op.replace('OP', '')}}</p> \r\n                              <div [ngClass]=\"'transparentBox colorInnerBox ' + op\"></div>\r\n                              <div  [ngClass]=\"'transparentBox colorInnerBox outlinedBox ' + op\"></div>\r\n                          </div>\r\n                       </div>\r\n               </div>\r\n         </div>\r\n      </section>\r\n    </section>\r\n    <section *ngIf=\"getTheme == 'Flow'\">\r\n        <section *ngIf=\"btnCategory == 'primary'\">\r\n            <div  *ngFor= \"let primaryColor of bgcolorFlowPrimary\">\r\n                <h4>{{primaryColor | uppercase}}</h4>\r\n                <div  class=\"colorPallett\">\r\n                    <div class=\"colorSet\">\r\n                        <div [ngClass]=\"'colorBox  ' + primaryColor\"  *ngFor = \"let op of opacity\">\r\n                                <p class=\"codeValue\">{{op.replace('C', '')}}</p> \r\n                                <div [ngClass]=\"'colorInnerBox ' + op\"></div>\r\n                                <div [ngClass]=\"'colorInnerBox outlinedBox ' + op\"></div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"transparencySet\">\r\n                        <div [ngClass]=\"'colorBox  ' + primaryColor\"  *ngFor = \"let op of transparency\">\r\n                            <p class=\"codeValue\">{{op.replace('OP', '')}}</p> \r\n                            <div [ngClass]=\"'transparentBox colorInnerBox ' + op\"></div>\r\n                            <div  [ngClass]=\"'transparentBox colorInnerBox outlinedBox ' + op\"></div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n        <section *ngIf=\"btnCategory == 'secondary'\">\r\n            <div  *ngFor= \"let secondaryColor of bgcolorFlowSecondary\">\r\n                <h4>{{secondaryColor  | uppercase}}</h4>\r\n                <div class=\"colorPallett\">\r\n                    <div class=\"colorSet\">\r\n                        <div [ngClass]=\"'colorBox  ' + secondaryColor\"  *ngFor = \"let op of ['C50','C100','C200','C300','C400','C500','C600','C700','C800']\">\r\n                            <p class=\"codeValue\">{{op.replace('C', '')}}</p>   \r\n                            <div mat-raised-button [ngStyle]=\"{'font-weight': '600', 'border': '0px'}\" [ngClass]=\"'colorInnerBox ' + op\"></div>\r\n                            <div  [ngStyle]=\"{'font-weight': '600'}\" [ngClass]=\"'colorInnerBox outlinedBox ' + op\"></div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"transparencySet\">\r\n                        <div [ngClass]=\"'colorBox  ' + secondaryColor\"  *ngFor = \"let op of transparency\">\r\n                            <p class=\"codeValue\">{{op.replace('OP', '')}}</p> \r\n                            <div [ngClass]=\"'transparentBox colorInnerBox ' + op\"></div>\r\n                            <div  [ngClass]=\"'transparentBox colorInnerBox outlinedBox ' + op\"></div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n        <section *ngIf=\"btnCategory == 'teritary'\">\r\n            <div  *ngFor= \"let teritaryColor of bgcolorFlowTeritary\"  class=\"colorSet\">\r\n                    <h4>{{teritaryColor | uppercase}}</h4>\r\n                    <div  class=\"colorPallett\">\r\n                            <div  class=\"colorSet\">\r\n                                <div [ngClass]=\"'colorBox  ' + teritaryColor\"  *ngFor = \"let op of opacity\">\r\n                                    <p class=\"codeValue\">{{op.replace('C', '')}}</p>\r\n                                    <div mat-raised-button [ngStyle]=\"{'font-weight': '600', 'border': '0px'}\" [ngClass]=\"'colorInnerBox ' + op\"></div>\r\n                                    <div  [ngStyle]=\"{'font-weight': '600'}\" [ngClass]=\"'colorInnerBox outlinedBox ' + op\"></div>\r\n                                </div>\r\n                            </div>\r\n                            <div  class=\"transparencySet\">\r\n                                <div [ngClass]=\"'colorBox  ' + teritaryColor\"  *ngFor = \"let op of transparency\">\r\n                                    <p class=\"codeValue\">{{op.replace('OP', '')}}</p> \r\n                                    <div [ngClass]=\"'transparentBox colorInnerBox ' + op\"></div>\r\n                                    <div  [ngClass]=\"'transparentBox colorInnerBox outlinedBox ' + op\"></div>\r\n                                </div>\r\n                            </div>\r\n                    </div>\r\n            </div>\r\n        </section>\r\n    </section>\r\n</article>`,\r\n  styleUrls: ['./color.scss'],\r\n})\r\nexport default class colorsComponent implements OnInit {\r\n\r\n  textAlignment= \"left\";\r\n  opacity = ['C50','C100','C200','C300','C400','C500','C600','C700','C800','C900'];\r\n  transparency = ['OP8','OP16','OP24','OP32','OP40','OP48'];\r\n  btnCategory: \"primary\";\r\n  getTheme = \"VTR\";\r\n  bgcolorVTRPrimary= [\"pink\"];\r\n  bgcolorVTRSecondary= [\"blue\",\"violent\",\"lightBlue\",\"paleCyan\"];\r\n  bgcolorVTRTeritary= [\"green\",\"paleBlue\",\"orange\",\"red\"];\r\n  bgcolorFlowPrimary= [\"blue\"];\r\n  bgcolorFlowSecondary= [\"green\",\"violent\"];\r\n  bgcolorFlowTeritary= [\"red\",\"orange\"];\r\n  bgcolor= \"white\";\r\n  ngOnInit(){\r\n    this.getTheme = sessionStorage.getItem(\"theme\")\r\n    window.addEventListener(\"storage\",()=>{\r\n      this.getTheme = sessionStorage.getItem(\"theme\");\r\n    });\r\n  }\r\n}\r\n\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "\r\n.colorPallett{\r\n    margin:50px;\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n.colorSet{\r\n    flex-basis: 45%;\r\n}\r\n.colorBox{\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n}\r\n.colorInnerBox{\r\n    width:48px;\r\n    height: 48px;\r\n    border-radius: 10px;\r\n    margin: 10px;\r\n}\r\n\r\n.outlinedBox{\r\n    background-color: transparent !important;\r\n}\r\n.codeValue{\r\n    width: 10%;\r\n}",
+                    "styleUrl": "./color.scss"
+                }
+            ],
+            "stylesData": "",
+            "implements": [
+                "OnInit"
+            ]
+        },
+        {
+            "name": "typographyComponent",
+            "id": "component-typographyComponent-5ee5d69ad27bb986eff53cffb990a068",
+            "file": "stories/typography.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-typography",
+            "styleUrls": [
+                "./typography.scss"
+            ],
+            "styles": [],
+            "template": "<article class=\"template-fluid\"    [ngStyle]=\"{ 'text-align': textAlignment, 'background-color': bgcolor }\"\n  >\n    <section *ngIf=\"isbody\">\n      <div\n        [ngClass]=\"{\n          'dark-theme': bgcolor === 'black',\n          'light-theme': bgcolor === 'white',\n          'primary-color': colorVariant === 'primary',\n          'success-color': colorVariant === 'success',\n          'info-color': colorVariant === 'info',\n          'warning-color': colorVariant === 'warning',\n          'disabled-color': colorVariant === 'disabled',\n          'error-color': colorVariant === 'error'\n        }\"\n      >\n        <h1 class=\"b1\">B1 Body</h1>\n        <h2 class=\"b2\">B2 Body</h2>\n        <h3 class=\"b3\">B3 Body</h3>\n        <h4 class=\"b4\">B4 Body</h4>\n      </div>\n    </section>\n    <section *ngIf=\"isheading\">\n      <div\n        [ngClass]=\"{\n          'dark-theme': bgcolor === 'black',\n          'light-theme': bgcolor === 'white',\n          'primary-color': colorVariant === 'primary',\n          'success-color': colorVariant === 'success',\n          'info-color': colorVariant === 'info',\n          'warning-color': colorVariant === 'warning',\n          'disabled-color': colorVariant === 'disabled',\n          'error-color': colorVariant === 'error'\n        }\"\n      >\n        <h1 class=\"h1\">H1 Ultra Large</h1>\n        <h2 class=\"h2\">H2 Extra Large</h2>\n        <h3 class=\"h3\">H3 Large</h3>\n        <h4 class=\"h4\">H4 Medium</h4>\n        <h5 class=\"h5\">H5 Regular</h5>\n        <h6 class=\"h6\">H6 Small</h6>\n      </div>\n    </section>\n    <section *ngIf=\"issubline\">\n      <div\n        [ngClass]=\"{\n          'dark-theme': bgcolor === 'black',\n          'light-theme': bgcolor === 'white',\n          'primary-color': colorVariant === 'primary',\n          'success-color': colorVariant === 'success',\n          'info-color': colorVariant === 'info',\n          'warning-color': colorVariant === 'warning',\n          'disabled-color': colorVariant === 'disabled',\n          'error-color': colorVariant === 'error'\n        }\"\n      >\n        <h1 class=\"s1\">S1 SUBLINE</h1>\n        <h2 class=\"s2\">S2 SUBLINE</h2>\n        <h3 class=\"s3\">S3 SUBLINE</h3>\n        <h4 class=\"s4\">S4 Subline</h4>\n      </div>\n    </section>\n    <section *ngIf=\"istextcombinations\">\n      <p\n        class=\"storybook-title\"\n        [ngClass]=\"{\n          'storybook-title-large': textcombo === 'large',\n          'storybook-title-medium': textcombo === 'medium',\n          'storybook-title-small': textcombo === 'small',\n          'storybook-title-regular': textcombo === 'regular',\n          'dark-theme': bgcolor === 'black',\n          'light-theme': bgcolor === 'white'\n        }\"\n      >\n        Meet the small wild cats of Bhutan\n      </p>\n      <p\n        class=\"storybook-body\"\n        [ngClass]=\"{\n          'storybook-body-large': textcombo === 'large',\n          'storybook-body-medium': textcombo === 'medium',\n          'storybook-body-small': textcombo === 'small',\n          'storybook-body-regular': textcombo === 'regular',\n          'dark-theme': bgcolor === 'black',\n          'light-theme': bgcolor === 'white'\n        }\"\n      >\n        Did you know that Bhutan is a hotspot of wild cat diversity? It is home\n        to 11 species of wild cats which is about 30% of all wild cat species\n        found in the world. Considering that Bhutan only covers .03% of the\n        earth’s surface, that number seems even more amazing.\n      </p>\n    </section>\n  </article>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "bgcolor",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 103
+                },
+                {
+                    "name": "isbody",
+                    "defaultValue": "false",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 104
+                },
+                {
+                    "name": "isheading",
+                    "defaultValue": "false",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 105
+                },
+                {
+                    "name": "issubline",
+                    "defaultValue": "false",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 106
+                },
+                {
+                    "name": "textAlignment",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 102
+                }
+            ],
+            "methodsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter, NgZone } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-typography',\r\n  template: `<article class=\"template-fluid\"\r\n    [ngStyle]=\"{ 'text-align': textAlignment, 'background-color': bgcolor }\"\r\n  >\r\n    <section *ngIf=\"isbody\">\r\n      <div\r\n        [ngClass]=\"{\r\n          'dark-theme': bgcolor === 'black',\r\n          'light-theme': bgcolor === 'white',\r\n          'primary-color': colorVariant === 'primary',\r\n          'success-color': colorVariant === 'success',\r\n          'info-color': colorVariant === 'info',\r\n          'warning-color': colorVariant === 'warning',\r\n          'disabled-color': colorVariant === 'disabled',\r\n          'error-color': colorVariant === 'error'\r\n        }\"\r\n      >\r\n        <h1 class=\"b1\">B1 Body</h1>\r\n        <h2 class=\"b2\">B2 Body</h2>\r\n        <h3 class=\"b3\">B3 Body</h3>\r\n        <h4 class=\"b4\">B4 Body</h4>\r\n      </div>\r\n    </section>\r\n    <section *ngIf=\"isheading\">\r\n      <div\r\n        [ngClass]=\"{\r\n          'dark-theme': bgcolor === 'black',\r\n          'light-theme': bgcolor === 'white',\r\n          'primary-color': colorVariant === 'primary',\r\n          'success-color': colorVariant === 'success',\r\n          'info-color': colorVariant === 'info',\r\n          'warning-color': colorVariant === 'warning',\r\n          'disabled-color': colorVariant === 'disabled',\r\n          'error-color': colorVariant === 'error'\r\n        }\"\r\n      >\r\n        <h1 class=\"h1\">H1 Ultra Large</h1>\r\n        <h2 class=\"h2\">H2 Extra Large</h2>\r\n        <h3 class=\"h3\">H3 Large</h3>\r\n        <h4 class=\"h4\">H4 Medium</h4>\r\n        <h5 class=\"h5\">H5 Regular</h5>\r\n        <h6 class=\"h6\">H6 Small</h6>\r\n      </div>\r\n    </section>\r\n    <section *ngIf=\"issubline\">\r\n      <div\r\n        [ngClass]=\"{\r\n          'dark-theme': bgcolor === 'black',\r\n          'light-theme': bgcolor === 'white',\r\n          'primary-color': colorVariant === 'primary',\r\n          'success-color': colorVariant === 'success',\r\n          'info-color': colorVariant === 'info',\r\n          'warning-color': colorVariant === 'warning',\r\n          'disabled-color': colorVariant === 'disabled',\r\n          'error-color': colorVariant === 'error'\r\n        }\"\r\n      >\r\n        <h1 class=\"s1\">S1 SUBLINE</h1>\r\n        <h2 class=\"s2\">S2 SUBLINE</h2>\r\n        <h3 class=\"s3\">S3 SUBLINE</h3>\r\n        <h4 class=\"s4\">S4 Subline</h4>\r\n      </div>\r\n    </section>\r\n    <section *ngIf=\"istextcombinations\">\r\n      <p\r\n        class=\"storybook-title\"\r\n        [ngClass]=\"{\r\n          'storybook-title-large': textcombo === 'large',\r\n          'storybook-title-medium': textcombo === 'medium',\r\n          'storybook-title-small': textcombo === 'small',\r\n          'storybook-title-regular': textcombo === 'regular',\r\n          'dark-theme': bgcolor === 'black',\r\n          'light-theme': bgcolor === 'white'\r\n        }\"\r\n      >\r\n        Meet the small wild cats of Bhutan\r\n      </p>\r\n      <p\r\n        class=\"storybook-body\"\r\n        [ngClass]=\"{\r\n          'storybook-body-large': textcombo === 'large',\r\n          'storybook-body-medium': textcombo === 'medium',\r\n          'storybook-body-small': textcombo === 'small',\r\n          'storybook-body-regular': textcombo === 'regular',\r\n          'dark-theme': bgcolor === 'black',\r\n          'light-theme': bgcolor === 'white'\r\n        }\"\r\n      >\r\n        Did you know that Bhutan is a hotspot of wild cat diversity? It is home\r\n        to 11 species of wild cats which is about 30% of all wild cat species\r\n        found in the world. Considering that Bhutan only covers .03% of the\r\n        earth’s surface, that number seems even more amazing.\r\n      </p>\r\n    </section>\r\n  </article>`,\r\n  styleUrls: ['./typography.scss'],\r\n})\r\nexport default class typographyComponent {\r\n  textAlignment: 'left';\r\n  bgcolor: 'red';\r\n  isbody: boolean = false;\r\n  isheading: boolean = false;\r\n  issubline: boolean = false;\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./typography.scss"
+                }
+            ],
+            "stylesData": ""
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "alignOptions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/colors.stories.ts",
+                "type": "object",
+                "defaultValue": "{\r\n  left: 'left',\r\n  right: 'right',\r\n  center: 'center',\r\n}"
+            },
+            {
+                "name": "alignOptions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/typography.stories.ts",
+                "type": "object",
+                "defaultValue": "{\r\n  left: 'left',\r\n  right: 'right',\r\n  center: 'center',\r\n}"
+            },
+            {
+                "name": "body",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/typography.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [],\r\n  },\r\n  component: typographyComponent,\r\n  props: {\r\n    textAlignment: select('Alignment', alignOptions, 'left', 'Alignment'),\r\n    bgcolor: select('Color', colorOptions, '#ffff', 'Background'),\r\n    colorVariant: select('Color', colorVariants, 'default', 'Colors'),\r\n    isbody: true,\r\n  },\r\n})"
+            },
+            {
+                "name": "category",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/colors.stories.ts",
+                "type": "object",
+                "defaultValue": "{\r\n    primary: 'primary',\r\n    secondary: 'secondary',\r\n    teritary: 'teritary',\r\n    neutral: 'neutral'\r\n}"
+            },
+            {
+                "name": "colorOptions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/buttons.stories.ts",
+                "type": "object",
+                "defaultValue": "{\r\n  white: 'white',\r\n  black: 'black',\r\n}"
+            },
+            {
+                "name": "colorOptions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/colors.stories.ts",
+                "type": "object",
+                "defaultValue": "{\r\n    white: 'white',\r\n    black: 'black'\r\n}"
+            },
+            {
+                "name": "colorOptions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/typography.stories.ts",
+                "type": "object",
+                "defaultValue": "{\r\n  white: 'white',\r\n  black: 'black',\r\n}"
+            },
+            {
+                "name": "colorVariants",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/typography.stories.ts",
+                "type": "object",
+                "defaultValue": "{\r\n  default: 'default',\r\n  primary: 'primary',\r\n  success: 'success',\r\n  info: 'info',\r\n  disabled: 'disabled',\r\n  error: 'error'\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/vtr/src/environments/environment.prod.ts",
+                "type": "object",
+                "defaultValue": "{\r\n  production: true,\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/vtr/src/environments/environment.ts",
+                "type": "object",
+                "defaultValue": "{\r\n  production: false,\r\n}"
+            },
+            {
+                "name": "getGreeting",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/vtr-e2e/src/support/app.po.ts",
+                "type": "",
+                "defaultValue": "() => cy.get('h1')"
+            },
+            {
+                "name": "heading",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/typography.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [],\r\n  },\r\n  component: typographyComponent,\r\n  props: {\r\n    textAlignment: select('Alignment', alignOptions, 'left', 'Alignment'),\r\n    bgcolor: select('Mode', colorOptions, '#ffff', 'Background'),\r\n    colorVariant: select('Color', colorVariants, 'default', 'Colors'),\r\n    isheading: true,\r\n  },\r\n})"
+            },
+            {
+                "name": "neutral",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/colors.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\r\n  moduleMetaData: {\r\n    imports: [MatButtonModule, MatGridListModule, MatGridTile, MatGridList]\r\n  },  \r\n  component: colorsComponent,\r\n  props: {\r\n    textAlignment: select(\"Alignment\", alignOptions, \"left\", \"GROUP-ID1\"),\r\n    bgcolor: select('Color', colorOptions, 'white', 'Background'),\r\n    btnCategory: select(\"btnCategory\", category, \"neutral\", \"GROUP-ID3\"),\r\n  },\r\n})"
+            },
+            {
+                "name": "primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/colors.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\r\n  moduleMetaData: {\r\n    imports: [MatButtonModule, MatGridListModule, MatGridTile, MatGridList]\r\n  },  \r\n  component: colorsComponent,\r\n  props: {\r\n    textAlignment: select(\"Alignment\", alignOptions, \"left\", \"GROUP-ID1\"),\r\n    bgcolor: select('Color', colorOptions, 'white', 'Background'),\r\n    btnCategory: select(\"btnCategory\", category, \"primary\", \"GROUP-ID3\"),\r\n\r\n  },\r\n})"
+            },
+            {
+                "name": "primaryLarge",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/buttons.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [MatButtonModule]\r\n  },\r\n  component: Buttons,\r\n  props: {\r\n    text: text('text', \"Main CTA\"),\r\n    extraClass: text('extraClass', 'btn-large'),\r\n    isdisabled: boolean(\"isdisabled\", false),\r\n    secondary: boolean('secondary', false),\r\n    bgcolor: select('Color', colorOptions, '#ffff', 'Background'),\r\n  },\r\n})"
+            },
+            {
+                "name": "primaryLargeIcon",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/buttons.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [MatButtonModule]\r\n  },\r\n  component: Buttons,\r\n\r\n  props: {\r\n    text: text('text', \"Main CTA\"),\r\n    extraClass: text('extraClass', 'btn-large'),\r\n    isdisabled: boolean(\"isdisabled\", false),\r\n    secondary: boolean('secondary', false),\r\n    textright: boolean(\"textright\", false),\r\n    icon: boolean(\"icon\", false),\r\n    bgcolor: select('Color', colorOptions, '#ffff', 'Background'),\r\n    withicon: true\r\n  },\r\n})"
+            },
+            {
+                "name": "primarySmall",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/buttons.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [MatButtonModule]\r\n  },\r\n  component: Buttons,\r\n  props: {\r\n    text: text('text', \"Small CTA\"),\r\n    extraClass: text('extraClass', 'btn-small'),\r\n    isdisabled: boolean(\"isdisabled\", false),\r\n    secondary: boolean('secondary', false)\r\n  },\r\n})"
+            },
+            {
+                "name": "primarySmallIcon",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/buttons.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [MatButtonModule]\r\n  },\r\n  component: Buttons,\r\n\r\n  props: {\r\n    text: text('text', \"Small CTA\"),\r\n    extraClass: text('extraClass', 'btn-small'),\r\n    isdisabled: boolean(\"isdisabled\", false),\r\n    secondary: boolean('secondary', false),\r\n    textright: boolean(\"textright\", false),\r\n    icon: boolean(\"icon\", false),\r\n    bgcolor: select('Color', colorOptions, '#ffff', 'Background'),\r\n    withicon: true\r\n  },\r\n})"
+            },
+            {
+                "name": "secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/colors.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\r\n  moduleMetaData: {\r\n    imports: [MatButtonModule, MatGridListModule, MatGridTile, MatGridList]\r\n  },  \r\n  component: colorsComponent,\r\n  props: {\r\n    textAlignment: select(\"Alignment\", alignOptions, \"left\", \"GROUP-ID1\"),\r\n    bgcolor: select('Color', colorOptions, 'white', 'Background'),\r\n    btnCategory: select(\"btnCategory\", category, \"secondary\", \"GROUP-ID3\"),\r\n  },\r\n})"
+            },
+            {
+                "name": "subline",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/typography.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [],\r\n  },\r\n  component: typographyComponent,\r\n  props: {\r\n    textAlignment: select('Alignment', alignOptions, 'left', 'Alignment'),\r\n    bgcolor: select('Color', colorOptions, '#ffff', 'Background'),\r\n    colorVariant: select('Color', colorVariants, 'default', 'Colors'),\r\n    issubline: true,\r\n  },\r\n})"
+            },
+            {
+                "name": "support",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/colors.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\r\n  moduleMetaData: {\r\n    imports: [MatButtonModule, MatGridListModule, MatGridTile, MatGridList]\r\n  },  \r\n  component: colorsComponent,\r\n  props: {\r\n    textAlignment: select(\"Alignment\", alignOptions, \"left\", \"GROUP-ID1\"),\r\n    bgcolor: select('Color', colorOptions, 'white', 'Background'),\r\n    btnCategory: select(\"btnCategory\", category, \"teritary\", \"GROUP-ID3\"),\r\n  },\r\n})"
+            },
+            {
+                "name": "textcombinations",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/typography.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [],\r\n  },\r\n  component: typographyComponent,\r\n  props: {\r\n    textAlignment: select('Alignment', alignOptions, 'left', 'Alignment'),\r\n    bgcolor: select('Color', colorOptions, '#ffff', 'Background'),\r\n    textcombo: select(\r\n      'TextCombo',\r\n      textComboOptions,\r\n      'large',\r\n      'Text Combinations'\r\n    ),\r\n    istextcombinations: true,\r\n  },\r\n})"
+            },
+            {
+                "name": "textComboOptions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/typography.stories.ts",
+                "type": "object",
+                "defaultValue": "{\r\n  large: 'large',\r\n  medium: 'medium',\r\n  small: 'small',\r\n  regular: 'regular',\r\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "stories/colors.stories.ts": [
+                {
+                    "name": "alignOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/colors.stories.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  left: 'left',\r\n  right: 'right',\r\n  center: 'center',\r\n}"
+                },
+                {
+                    "name": "category",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/colors.stories.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n    primary: 'primary',\r\n    secondary: 'secondary',\r\n    teritary: 'teritary',\r\n    neutral: 'neutral'\r\n}"
+                },
+                {
+                    "name": "colorOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/colors.stories.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n    white: 'white',\r\n    black: 'black'\r\n}"
+                },
+                {
+                    "name": "neutral",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/colors.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n  moduleMetaData: {\r\n    imports: [MatButtonModule, MatGridListModule, MatGridTile, MatGridList]\r\n  },  \r\n  component: colorsComponent,\r\n  props: {\r\n    textAlignment: select(\"Alignment\", alignOptions, \"left\", \"GROUP-ID1\"),\r\n    bgcolor: select('Color', colorOptions, 'white', 'Background'),\r\n    btnCategory: select(\"btnCategory\", category, \"neutral\", \"GROUP-ID3\"),\r\n  },\r\n})"
+                },
+                {
+                    "name": "primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/colors.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n  moduleMetaData: {\r\n    imports: [MatButtonModule, MatGridListModule, MatGridTile, MatGridList]\r\n  },  \r\n  component: colorsComponent,\r\n  props: {\r\n    textAlignment: select(\"Alignment\", alignOptions, \"left\", \"GROUP-ID1\"),\r\n    bgcolor: select('Color', colorOptions, 'white', 'Background'),\r\n    btnCategory: select(\"btnCategory\", category, \"primary\", \"GROUP-ID3\"),\r\n\r\n  },\r\n})"
+                },
+                {
+                    "name": "secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/colors.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n  moduleMetaData: {\r\n    imports: [MatButtonModule, MatGridListModule, MatGridTile, MatGridList]\r\n  },  \r\n  component: colorsComponent,\r\n  props: {\r\n    textAlignment: select(\"Alignment\", alignOptions, \"left\", \"GROUP-ID1\"),\r\n    bgcolor: select('Color', colorOptions, 'white', 'Background'),\r\n    btnCategory: select(\"btnCategory\", category, \"secondary\", \"GROUP-ID3\"),\r\n  },\r\n})"
+                },
+                {
+                    "name": "support",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/colors.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n  moduleMetaData: {\r\n    imports: [MatButtonModule, MatGridListModule, MatGridTile, MatGridList]\r\n  },  \r\n  component: colorsComponent,\r\n  props: {\r\n    textAlignment: select(\"Alignment\", alignOptions, \"left\", \"GROUP-ID1\"),\r\n    bgcolor: select('Color', colorOptions, 'white', 'Background'),\r\n    btnCategory: select(\"btnCategory\", category, \"teritary\", \"GROUP-ID3\"),\r\n  },\r\n})"
+                }
+            ],
+            "stories/typography.stories.ts": [
+                {
+                    "name": "alignOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/typography.stories.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  left: 'left',\r\n  right: 'right',\r\n  center: 'center',\r\n}"
+                },
+                {
+                    "name": "body",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/typography.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [],\r\n  },\r\n  component: typographyComponent,\r\n  props: {\r\n    textAlignment: select('Alignment', alignOptions, 'left', 'Alignment'),\r\n    bgcolor: select('Color', colorOptions, '#ffff', 'Background'),\r\n    colorVariant: select('Color', colorVariants, 'default', 'Colors'),\r\n    isbody: true,\r\n  },\r\n})"
+                },
+                {
+                    "name": "colorOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/typography.stories.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  white: 'white',\r\n  black: 'black',\r\n}"
+                },
+                {
+                    "name": "colorVariants",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/typography.stories.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  default: 'default',\r\n  primary: 'primary',\r\n  success: 'success',\r\n  info: 'info',\r\n  disabled: 'disabled',\r\n  error: 'error'\r\n}"
+                },
+                {
+                    "name": "heading",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/typography.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [],\r\n  },\r\n  component: typographyComponent,\r\n  props: {\r\n    textAlignment: select('Alignment', alignOptions, 'left', 'Alignment'),\r\n    bgcolor: select('Mode', colorOptions, '#ffff', 'Background'),\r\n    colorVariant: select('Color', colorVariants, 'default', 'Colors'),\r\n    isheading: true,\r\n  },\r\n})"
+                },
+                {
+                    "name": "subline",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/typography.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [],\r\n  },\r\n  component: typographyComponent,\r\n  props: {\r\n    textAlignment: select('Alignment', alignOptions, 'left', 'Alignment'),\r\n    bgcolor: select('Color', colorOptions, '#ffff', 'Background'),\r\n    colorVariant: select('Color', colorVariants, 'default', 'Colors'),\r\n    issubline: true,\r\n  },\r\n})"
+                },
+                {
+                    "name": "textcombinations",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/typography.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [],\r\n  },\r\n  component: typographyComponent,\r\n  props: {\r\n    textAlignment: select('Alignment', alignOptions, 'left', 'Alignment'),\r\n    bgcolor: select('Color', colorOptions, '#ffff', 'Background'),\r\n    textcombo: select(\r\n      'TextCombo',\r\n      textComboOptions,\r\n      'large',\r\n      'Text Combinations'\r\n    ),\r\n    istextcombinations: true,\r\n  },\r\n})"
+                },
+                {
+                    "name": "textComboOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/typography.stories.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  large: 'large',\r\n  medium: 'medium',\r\n  small: 'small',\r\n  regular: 'regular',\r\n}"
+                }
+            ],
+            "stories/buttons.stories.ts": [
+                {
+                    "name": "colorOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/buttons.stories.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  white: 'white',\r\n  black: 'black',\r\n}"
+                },
+                {
+                    "name": "primaryLarge",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/buttons.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [MatButtonModule]\r\n  },\r\n  component: Buttons,\r\n  props: {\r\n    text: text('text', \"Main CTA\"),\r\n    extraClass: text('extraClass', 'btn-large'),\r\n    isdisabled: boolean(\"isdisabled\", false),\r\n    secondary: boolean('secondary', false),\r\n    bgcolor: select('Color', colorOptions, '#ffff', 'Background'),\r\n  },\r\n})"
+                },
+                {
+                    "name": "primaryLargeIcon",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/buttons.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [MatButtonModule]\r\n  },\r\n  component: Buttons,\r\n\r\n  props: {\r\n    text: text('text', \"Main CTA\"),\r\n    extraClass: text('extraClass', 'btn-large'),\r\n    isdisabled: boolean(\"isdisabled\", false),\r\n    secondary: boolean('secondary', false),\r\n    textright: boolean(\"textright\", false),\r\n    icon: boolean(\"icon\", false),\r\n    bgcolor: select('Color', colorOptions, '#ffff', 'Background'),\r\n    withicon: true\r\n  },\r\n})"
+                },
+                {
+                    "name": "primarySmall",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/buttons.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [MatButtonModule]\r\n  },\r\n  component: Buttons,\r\n  props: {\r\n    text: text('text', \"Small CTA\"),\r\n    extraClass: text('extraClass', 'btn-small'),\r\n    isdisabled: boolean(\"isdisabled\", false),\r\n    secondary: boolean('secondary', false)\r\n  },\r\n})"
+                },
+                {
+                    "name": "primarySmallIcon",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/buttons.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\r\n  moduleMetadata: {\r\n    imports: [MatButtonModule]\r\n  },\r\n  component: Buttons,\r\n\r\n  props: {\r\n    text: text('text', \"Small CTA\"),\r\n    extraClass: text('extraClass', 'btn-small'),\r\n    isdisabled: boolean(\"isdisabled\", false),\r\n    secondary: boolean('secondary', false),\r\n    textright: boolean(\"textright\", false),\r\n    icon: boolean(\"icon\", false),\r\n    bgcolor: select('Color', colorOptions, '#ffff', 'Background'),\r\n    withicon: true\r\n  },\r\n})"
+                }
+            ],
+            "apps/vtr/src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/vtr/src/environments/environment.prod.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true,\r\n}"
+                }
+            ],
+            "apps/vtr/src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/vtr/src/environments/environment.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: false,\r\n}"
+                }
+            ],
+            "apps/vtr-e2e/src/support/app.po.ts": [
+                {
+                    "name": "getGreeting",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/vtr-e2e/src/support/app.po.ts",
+                    "type": "",
+                    "defaultValue": "() => cy.get('h1')"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "apps/vtr-e2e/src/support/app.po.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "getGreeting",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/vtr-e2e/src/support/commands.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Chainable",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/vtr/src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/vtr/src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/vtr/src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/buttons.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/buttons.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "colorOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/buttons.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "primaryLarge",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/buttons.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "primaryLargeIcon",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/buttons.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "primarySmall",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/buttons.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "primarySmallIcon",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/colors.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "colorsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/14",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/colors.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "alignOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/colors.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "category",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/colors.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "colorOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/colors.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "neutral",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/colors.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/colors.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/colors.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "support",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/typography.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "typographyComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "alignOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "body",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "colorOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "colorVariants",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "heading",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "subline",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "textcombinations",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "textComboOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}
