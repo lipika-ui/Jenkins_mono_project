@@ -15,7 +15,7 @@ stage('install dependencies')
     {
         steps{sh 'npm install'}
     }
-stage('unit test')
+stage('run unit test')
 {
     steps{sh 'npm run test'}
 }
